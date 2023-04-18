@@ -30,6 +30,10 @@ systemctl enable user
 systemctl rstart user
 
 echo -e "\e[36m>>>>>>>> create application directory <<<<<<<<<\e[0m"
-cp mongo.repo /etc/yum.repos.d/mongo.repo
+cp /home/centos/roboshop.sh/mongo.repo /etc/yum.repos.d/mongo.repo
+
+echo -e "\e[36m>>>>>>>> install mongodb client <<<<<<<<<\e[0m"
 yum install mongodb-org-shell -y
+
+echo -e "\e[36m>>>>>>>> load schema <<<<<<<<<\e[0m"
 mongo --host mongodb.devops1722.com </app/schema/catalogue.js
