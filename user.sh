@@ -27,7 +27,7 @@ cp /home/centos/roboshop.sh/user.service /etc/systemd/system/cuser.service
 echo -e "\e[36m>>>>>>>> start user service <<<<<<<<<\e[0m"
 systemctl daemon-reload
 systemctl enable user
-systemctl rstart user
+systemctl restart user
 
 echo -e "\e[36m>>>>>>>> create application directory <<<<<<<<<\e[0m"
 cp /home/centos/roboshop.sh/mongo.repo /etc/yum.repos.d/mongo.repo
