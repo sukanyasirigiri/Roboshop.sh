@@ -22,7 +22,7 @@ echo -e "\e[36m>>>>>>>> install nodejs dependencies <<<<<<<<<\e[0m"
 npm install
 
 echo -e "\e[36m>>>>>>>> copy user systemd file <<<<<<<<<\e[0m"
-cp /home/centos/Roboshop.sh/user.service /etc/systemd/system/user.service
+cp /home/centos/ROBOSHOP.SH.sh/user.service /etc/systemd/system/user.service
 
 echo -e "\e[36m>>>>>>>> start user service <<<<<<<<<\e[0m"
 systemctl daemon-reload
@@ -30,7 +30,7 @@ systemctl enable user
 systemctl restart user
 
 echo -e "\e[36m>>>>>>>> copy mongodb repo <<<<<<<<<\e[0m"
-cp /home/centos/Roboshop.sh/mongo.repo /etc/yum.repos.d/mongo.repo
+cp /home/centos/ROBOSHOP.SH/mongo.repo /etc/yum.repos.d/mongo.repo
 
 echo -e "\e[36m>>>>>>>> install mongodb client <<<<<<<<<\e[0m"
 yum install mongodb-org-shell -y
