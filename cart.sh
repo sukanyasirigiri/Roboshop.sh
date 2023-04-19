@@ -12,19 +12,19 @@ rm -rf /app
 mkdir /app 
 
 echo -e "\e[36m>>>>>>>> download app content <<<<<<<<<\e[0m"
-curl -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip 
+curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip 
 cd /app 
 
-echo -e "\e[36m>>>>>>>> unzip app content <<<<<<<<<\e[0m"
-unzip /tmp/cart.zip 
+echo -e "\e[36m>>>>>>>> download app content <<<<<<<<<\e[0m"
+unzip /tmp/cart.zip
 
 echo -e "\e[36m>>>>>>>> install nodejs dependencies <<<<<<<<<\e[0m"
-npm install
+npm install 
 
-echo -e "\e[36m>>>>>>>> create application directory <<<<<<<<<\e[0m"
+echo -e "\e[36m>>>>>>>> copy user systemd file <<<<<<<<<\e[0m"
 cp /home/centos/Roboshop.sh/cart.service /etc/systemd/system/cart.service
 
 echo -e "\e[36m>>>>>>>> start cart service <<<<<<<<<\e[0m"
 systemctl daemon-reload
-systemctl enable cart
+systemctl enable cart 
 systemctl restart cart
