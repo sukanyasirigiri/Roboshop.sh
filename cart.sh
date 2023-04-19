@@ -21,7 +21,7 @@ unzip /tmp/cart.zip
 echo -e "\e[36m>>>>>>>> install nodejs dependencies <<<<<<<<<\e[0m"
 npm install
 
-echo -e "\e[36m>>>>>>>> copy cart systemd file <<<<<<<<<\e[0m"
+echo -e "\e[36m>>>>>>>> create application directory <<<<<<<<<\e[0m"
 cp /home/centos/Roboshop.sh/cart.service /etc/systemd/system/cart.service
 
 echo -e "\e[36m>>>>>>>> start cart service <<<<<<<<<\e[0m"
